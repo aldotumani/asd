@@ -29,7 +29,7 @@ body
   color: black;
   font-family: 'Copperplate';
   text-transform: uppercase;
-  font-size:15px;
+  font-size:20px;
   letter-spacing: 0px;
   float: left;
   border-bottom: solid 1px $verde-border;
@@ -38,7 +38,7 @@ body
 .nav
 {
   float:right;
-  padding: 23px 15px;
+  padding: 23px 13px;
   padding-top:35px;
   cursor: pointer;
 
@@ -85,9 +85,19 @@ input{
 
 @font-face {
   font-family: Copperplate;
+  src: url('/assets/Copperplate Gothic Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: Copperplate;
   src: url('/assets/Copperplate Gothic Bold Regular.ttf');
   font-weight: normal;
   font-style: normal;
+  font-weight: bold;
+
 
 }
 @font-face {
