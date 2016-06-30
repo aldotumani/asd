@@ -24,6 +24,8 @@
 
 a {
     color: black;
+    line-height: 1px;
+
 }
 
 
@@ -37,6 +39,7 @@ a:visited {
 
 a:hover {
     color: #166565;
+    font-size:25px;
 
 }
 

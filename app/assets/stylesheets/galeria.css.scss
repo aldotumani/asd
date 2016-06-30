@@ -9,3 +9,22 @@
     color:$azul-hover;
   }
 }
+
+
+.fondo-verde-hover:hover
+{
+  background-color: $verde;
+
+}
+.fondo-verde-hover{
+    border-radius: 50%;
+  width:100%;
+  display: block;
+  vertical-align: middle;
+}
+
+.foto-avatar {
+  width:80%; text-align: center; border-radius: 50%; margin-bottom:10px;}
+.foto-avatar:hover {
+  width:100%;
+}
