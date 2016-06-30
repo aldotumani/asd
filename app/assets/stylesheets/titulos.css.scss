@@ -19,8 +19,6 @@
   //color: $azul;
   color: $verde;
 
-  letter-spacing: 3px;
-
 }
 .texto
 {
@@ -67,11 +65,13 @@ text-transform: uppercase;
 .cargo{
   text-transform: uppercase;
   font-family: "Copperplate";
-  font-weight: bold;
+  font-size: 15px;
+
 
 }
 .carrera{
   text-transform: uppercase;
   font-family: "Copperplate";
+  font-size: 12px;
 
  }
