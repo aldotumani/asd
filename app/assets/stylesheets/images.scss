@@ -1,3 +1,32 @@
-// Place all the styles related to the Images controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "colors.css.scss";
+
+.barra{
+  width: 84%;
+  margin: 0% 8%;
+  height: 7px;
+  margin-top: 80px;
+  margin-bottom: 30px;
+
+}
+.barra1{
+  height: 100%;
+  background-color: #166565;
+  width: 33.333333%;
+  float: left;
+}
+.barra2{
+  height: 100%;
+  background-color: #448f8f;
+  width: 33.333333%;
+  float: left;
+
+
+}
+.barra3{
+  height: 100%;
+  background-color: #b4d2d2;
+  width: 33.333333%;
+  float: left;
+
+
+}
