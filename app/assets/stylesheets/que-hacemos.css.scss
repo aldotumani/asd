@@ -1,0 +1,33 @@
+@import "colors.css.scss";
+
+
+.que-hacemos
+{
+  background:url('Energia_solar.jpg') no-repeat 0% 0%;
+  //height: 560px;
+  overflow: hidden;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.fondo-transparente
+{
+  width: 100%;
+  padding: 25px 0;
+  overflow: hidden;
+  background: rgba(31, 59, 93, 0.25);
+  float: left;
+
+}
+
+.contacto
+{
+  background:url('fondo_abajo.jpg') no-repeat 0% 45%;
+  overflow: hidden;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}

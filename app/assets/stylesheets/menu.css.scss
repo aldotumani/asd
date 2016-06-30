@@ -1,0 +1,100 @@
+@import "colors.css.scss";
+
+html
+{
+  height: 100%;
+  width: 100%;
+
+}
+h3{
+  font-weight: 300;
+}
+body
+{
+  height: 100%;
+  width: 100%;
+  background: white;
+  color: black;
+  margin: 0;
+  //background: #ffffff;
+  //color: #444;
+  //font-family: 'Gotham', sans-serif;
+  //background-image: url("fondo-rugoso.png");
+}
+
+.menu
+{
+  width: 100%;
+  background: white;
+  color: black;
+  font-family: 'Copperplate';
+  text-transform: uppercase;
+  font-size:15px;
+  letter-spacing: 1px;
+  float: left;
+  border-bottom: solid 1px $verde-border;
+
+}
+.nav
+{
+  float:right;
+  padding: 23px 15px;
+  padding-top:35px;
+  cursor: pointer;
+
+}
+
+.nav:hover{
+  color: black;
+}
+
+@font-face {
+  font-family: Intro;
+  src: url('/assets/Intro.otf');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: Intro;
+  src: url('/assets/Intro Inline.otf');
+  font-weight: normal;
+  font-style: italic;
+
+}
+@font-face {
+  font-family: Tw;
+  src: url('/assets/tw-cen-mt.ttf');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: Isocp;
+  src: url('/assets/ISOCP.ttf');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+input{
+  color: #305d90
+}
+
+@font-face {
+  font-family: Copperplate;
+  src: url('/assets/Copperplate Gothic Bold Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: Cambria;
+  src: url('/assets/Cambria.ttf');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
