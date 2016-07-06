@@ -143,10 +143,12 @@
         <br>
           <div class="ver-mas"><%= link_to "ver más videos", videos_url %></div>
         <% @video = Video.all.order(updated_at: :desc).first %>
+          <% if @video != nil %>
           <iframe title="<%= @video.titulo %>" class="youtube-player" type="text/html"
                   src="http://www.youtube.com/embed/<%= @video.video %>"
                   frameborder="0" allowFullScreen></iframe>
           <div class="titulo-youtube"><%=@video.titulo %></div>
+              <% end %>
         </div>
         <div class="col-xs-1">
         </div>
