@@ -1,0 +1,75 @@
+<a href="<%= root_path %>">
+  <img src="assets/portada2.png" style="width:100%;">
+</a>
+
+<div class="titulo-azul text-center" style="font-size:50px;margin-top: 40px;">Noticias</div>
+
+<div class="barra" style="margin-top: 25px; margin-bottom:40px;">
+  <div class="barra1"></div>
+  <div class="barra2"></div>
+  <div class="barra3"></div>
+</div>
+
+
+
+
+    <div class="row">
+
+      <div class="col-xs-1"></div>
+      <div class="col-xs-10">
+        <% if @news_items != nil %>
+
+
+        <% @news_items.order(updated_at: :desc).in_groups_of(3).each do |group| %>
+
+                <div class="row" style="margin-bottom:20px">
+
+                <% group.each do |news| %>
+
+                      <% if news!= nil %>
+
+                          <%= link_to news.link, :target => "_blank" do %>
+                <div class="col-xs-4 videos-index links_claros">
+                  <%= image_tag news.image.url(:medium_1x), style:"width:100%"%>
+
+                  <div class="titulo-youtube"><%=news.titulo %></div>
+                  <% if user_signed_in? %>
+                  <%= link_to 'Editar', edit_news_item_path(news), class:"btn btn-warning", style:"color:white;"  %>
+                  <%= link_to 'Eliminar', news, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger", style:"color:white;" %>
+                      <% end %>
+                      </div>
+                          <% end %>
+
+                <% end %>
+                  <% end %>
+
+                      </div>
+
+
+      <% end %>
+
+
+
+        <% end %>
+
+      </div>
+
+      <div class="col-xs-1"></div>
+    </div>
+
+
+
+<% if user_signed_in? %>
+
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">
+
+      <%= link_to 'Nueva Noticia', new_news_item_path, class:"btn btn-primary" %>
+
+  </div>
+
+  <div class="col-xs-1"></div>
+</div>
+
+<% end %>

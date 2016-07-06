@@ -76,7 +76,7 @@
 
     <div class="col-xs-3">
       <img src="assets/enchufe.png" style="width:100%;">
-      <div class="texto-iconos">red electrica</div>
+      <div class="texto-iconos">Conexíon Red Electrica</div>
     </div>
 </div>
     <div class="col-xs-1"></div>
@@ -132,15 +132,24 @@
 <div class="row" id="galeria">
   <div class="col-xs-1"></div>
   <div class="col-xs-10">
+
     <div class="margenes-superiores" style="margin-top: 0">
+
       <div class="col-xs-12">
-        <div class="col-xs-6">
+        <div class="col-xs-5">
 
         <div class="titulo-blanco">imágenes</div>
         <div class="titulo-azul">productos</div>
         <br>
-
-      </div>
+          <div class="ver-mas"><%= link_to "ver más videos", videos_url %></div>
+        <% @video = Video.all.order(updated_at: :desc).first %>
+          <iframe title="<%= @video.titulo %>" class="youtube-player" type="text/html"
+                  src="http://www.youtube.com/embed/<%= @video.video %>"
+                  frameborder="0" allowFullScreen></iframe>
+          <div class="titulo-youtube"><%=@video.titulo %></div>
+        </div>
+        <div class="col-xs-1">
+        </div>
 
         <div class="col-xs-6">
 
@@ -155,25 +164,49 @@
         </div>
 
 
-        <div class="col-xs-12" style="margin-top:30px">
+        <div class="col-xs-12" style="margin-top:40px">
 
           <div class="titulo-blanco" id="contexto">en qué estamos</div>
           <div class="titulo-azul">contexto</div>
-          <br>
+          <div class="ver-mas"><%= link_to "ver más noticias", news_items_path %></div>
+
+
+
+            <div class="row">
+              <% NewsItem.order(updated_at: :desc).first(3).each do |news| %>
+
+            <%= link_to news.link, :target => "_blank" do %>
+
+            <div class="col-xs-4 videos-index links_claros">
+                          <%= image_tag news.image.url(:medium_1x), style:"width:100%"%>
+
+                          <div class="titulo-youtube"><%=news.titulo %></div>
+                  <% end %>
+
+                  </div>
+
+          <% end %>
+
+              </div>
+
+
+
         </div>
-
-
-        </div>
-
 
 
       </div>
     </div>
+  </div>
+
+
   <div class="col-xs-1">
   </div>
 </div>
 
-</div>
+
+
+
+
 
 
 <div class="contacto" id="contacto">
@@ -219,7 +252,7 @@
 
   <div class="col-xs-3" style="padding: 0 30px; text-align: center">
 
-      <img src="assets/avatar.jpg" class="foto-avatar">
+      <img src="assets/rodolfo.png" class="foto-avatar">
     <div class="nombre">Rodolfo Ulloa<br></div>
     <div class="nombre">Iglesias<br></div>
     <div class="cargo">co-fouder<br></div>
@@ -228,7 +261,7 @@
   </div>
 
   <div class="col-xs-3" style="padding: 0 30px; text-align: center;">
-      <img src="assets/avatar.jpg" class="foto-avatar">
+      <img src="assets/jaime.png" class="foto-avatar">
     <div class="nombre">Jaime Besa<br></div>
     <div class="nombre">Vergara<br></div>
     <div class="cargo">co-fouder<br></div>
@@ -237,7 +270,7 @@
   </div>
 
   <div class="col-xs-3" style="padding: 0 30px;text-align: center;">
-      <img src="assets/avatar.jpg" class="foto-avatar">
+      <img src="assets/pablo.png" class="foto-avatar">
     <div class="nombre">Pablo Vila<br></div>
     <div class="nombre">Vomiero<br></div>
     <div class="cargo">co-fouder<br></div>
@@ -247,7 +280,7 @@
 
 
   <div class="col-xs-3" style="padding: 0 30px;text-align: center;  ">
-      <img src="assets/avatar.jpg" class="foto-avatar">
+      <img src="assets/tomas.png" class="foto-avatar">
     <div class="nombre">Tomás Durán<br></div>
     <div class="nombre">Godoy<br></div>
     <div class="cargo">co-fouder<br></div>

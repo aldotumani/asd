@@ -22,11 +22,7 @@
      margin-left: 0;
 }
 
-a {
-    color: black;
-    line-height: 1px;
 
-}
 
 
 a:link {
@@ -37,11 +33,7 @@ a:visited {
     text-decoration: none;
 }
 
-a:hover {
-    color: #166565;
-    font-size:25px;
 
-}
 
 a:active {
     text-decoration: none;

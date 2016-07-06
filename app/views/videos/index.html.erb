@@ -1,0 +1,61 @@
+<a href="<%= root_path %>">
+<img src="assets/portada2.png" style="width:100%;">
+</a>
+
+<div class="titulo-azul text-center" style="font-size:50px;margin-top: 40px;">Videos</div>
+
+<div class="barra" style="margin-top: 25px; margin-bottom:40px;">
+  <div class="barra1"></div>
+  <div class="barra2"></div>
+  <div class="barra3"></div>
+</div>
+
+
+<div class="row">
+
+<div class="col-xs-1"></div>
+<div class="col-xs-10">
+  <% if @videos!= nil %>
+
+    <% @videos.order(updated_at: :desc).each do |video| %>
+      <div class="col-xs-4 videos-index">
+
+      <iframe title="<%=video.titulo %>" class="youtube-player" type="text/html"
+              src="http://www.youtube.com/embed/<%= video.video %>"
+              frameborder="0" allowFullScreen></iframe>
+      <div class="titulo-youtube"><%=video.titulo %></div>
+        <% if user_signed_in? %>
+
+      <%= link_to 'Editar', edit_video_path(video), class:"btn btn-warning", style:"color:white;"  %>
+      <%= link_to 'Eliminar', video, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger", style:"color:white;" %>
+     <% end %>
+      </div>
+
+      <% end %>
+
+  <% end %>
+
+  </div>
+
+
+  <% if user_signed_in? %>
+
+
+<div class="col-xs-1"></div>
+  </div>
+
+<div class="row">
+  <div class="col-xs-1"></div>
+  <div class="col-xs-10">
+
+  <%= link_to 'Nuevo Video', new_video_path, class:"btn btn-primary" %></div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  </div>
+
+  <div class="col-xs-1"></div>
+</div>
+<% end %>
