@@ -38,7 +38,11 @@
   text-align: center;
 
 }
+.modal{
+  font-family: 'Copperplate';
+  font-size:15px;
 
+}
 .margenes-superiores{
   margin:55px 0;
   overflow: hidden;
@@ -92,3 +96,20 @@ a:hover {
 a {
   color: white;
 }
+
+
+.punto{
+  display: inline-block;
+  color: $barra2;
+  font-size: 20px;
+}
+
+.modal-title {
+
+  font-size: 20px;
+  font-family: "Copperplate";
+  text-transform: uppercase;
+  //color: $azul;
+  color: $verde;
+}
+

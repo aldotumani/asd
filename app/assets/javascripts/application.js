@@ -14,3 +14,17 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function() {
+
+    $('.foto-y-fondo').mouseenter(function () {
+
+        $(this).children('.fondo-verde').css({ opacity: 1 });
+    }).mouseleave(function() {
+        $(this).children('.fondo-verde').css({ opacity: 0 });
+    });
+
+
+
+});
