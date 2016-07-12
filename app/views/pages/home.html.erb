@@ -259,9 +259,8 @@
 
 
     <div class="col-xs-2" style="position: relative; height: 200px">
-      <a href="mailto:contacto@abantosenergy.com">
-
-        <div class="foto-y-fondo mail mouse">
+      <a href="mailto:contacto@abantosenergy.com" class="email">
+        <div class="foto-y-fondo  mail mouse">
           <div class="fondo-verde mail-fondo" style=" width:65%; height: 70%;margin-top: 15%;"></div>
           <img src="assets/mail.png" style="width:100%;" class="iconos-info">
         </div>
@@ -477,17 +476,4 @@
     </div>
   </div>
 </div>
-
-
-<script>
-    $(document).on('click', 'a', function(event){
-        event.preventDefault();
-
-        $('html, body').animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top
-        }, 500);
-
-    });
-
-</script>
 
