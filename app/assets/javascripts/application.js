@@ -34,6 +34,10 @@ $(document).ready(function() {
             $(".costos-texto").addClass(("cambiar-color"));
             $(".costos-fondo").addClass(("cambiar-opacidad"));
         }
+
+        if($(this).hasClass("mail")){
+            $(".mail-fondo").addClass(("cambiar-opacidad"));
+        }
         //$(this).children('.fondo-verde').css({ opacity: 1 });
     }).mouseleave(function() {
         if($(this).hasClass("red")){
@@ -51,6 +55,10 @@ $(document).ready(function() {
         if($(this).hasClass("costos")){
             $(".costos-texto").removeClass(("cambiar-color"));
             $(".costos-fondo").removeClass(("cambiar-opacidad"));
+        }
+
+        if($(this).hasClass("mail")){
+            $(".mail-fondo").removeClass(("cambiar-opacidad"));
         }
        // $(this).children('.fondo-verde').css({ opacity: 0 });
     });
