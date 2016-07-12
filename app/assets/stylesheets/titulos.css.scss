@@ -120,3 +120,12 @@ a {
 .cambiar-opacidad{
 opacity: 1;
 }
+
+
+.texto-popup{
+  color:$verde;
+  font-size: 16px;
+  margin-top: -12px;
+  z-index: 6;
+  position: relative;
+}
