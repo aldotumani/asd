@@ -18,12 +18,45 @@
 
 $(document).ready(function() {
 
-    $('.foto-y-fondo').mouseenter(function () {
+    $('.mouse').mouseenter(function () {
 
-        $(this).children('.fondo-verde').css({ opacity: 1 });
+        if($(this).hasClass("red")){
+            $(".red-texto").addClass(("cambiar-color"));
+            $(".red-fondo").addClass(("cambiar-opacidad"));
+        }
+
+        if($(this).hasClass("paneles")){
+            $(".paneles-texto").addClass(("cambiar-color"));
+            $(".paneles-fondo").addClass(("cambiar-opacidad"));
+        }
+
+        if($(this).hasClass("costos")){
+            $(".costos-texto").addClass(("cambiar-color"));
+            $(".costos-fondo").addClass(("cambiar-opacidad"));
+        }
+        //$(this).children('.fondo-verde').css({ opacity: 1 });
     }).mouseleave(function() {
-        $(this).children('.fondo-verde').css({ opacity: 0 });
+        if($(this).hasClass("red")){
+            $(".red-texto").removeClass(("cambiar-color"));
+            $(".red-fondo").removeClass(("cambiar-opacidad"));
+
+        }
+
+        if($(this).hasClass("paneles")){
+            $(".paneles-texto").removeClass(("cambiar-color"));
+            $(".paneles-fondo").removeClass(("cambiar-opacidad"));
+        }
+
+
+        if($(this).hasClass("costos")){
+            $(".costos-texto").removeClass(("cambiar-color"));
+            $(".costos-fondo").removeClass(("cambiar-opacidad"));
+        }
+       // $(this).children('.fondo-verde').css({ opacity: 0 });
     });
+
+
+
 
 
 
