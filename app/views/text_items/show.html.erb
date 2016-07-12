@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nosotros:</strong>
+  <%= @text_item.nosotros %>
+</p>
+
+<p>
+  <strong>Quehacemos:</strong>
+  <%= @text_item.quehacemos %>
+</p>
+
+<p>
+  <strong>Elegirnos:</strong>
+  <%= @text_item.elegirnos %>
+</p>
+
+<p>
+  <strong>Contacto:</strong>
+  <%= @text_item.contacto %>
+</p>
+
+<%= link_to 'Edit', edit_text_item_path(@text_item) %> |
+<%= link_to 'Back', text_items_path %>

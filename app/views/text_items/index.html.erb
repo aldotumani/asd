@@ -1,0 +1,51 @@
+<a href="<%= root_path %>">
+  <img src="assets/portada2.png" style="width:100%;">
+</a>
+
+<div class="titulo-azul text-center" style="font-size:50px;margin-top: 40px;">Textos</div>
+
+<div class="barra" style="margin-top: 25px; margin-bottom:40px;">
+  <div class="barra1"></div>
+  <div class="barra2"></div>
+  <div class="barra3"></div>
+</div>
+
+
+<div class="row">
+
+  <div class="col-xs-1"></div>
+  <div class="col-xs-10">
+
+    <table>
+      <thead>
+      <tr>
+        <th>Nosotros</th>
+        <th>Quehacemos</th>
+        <th>Quehacemos2</th>
+
+        <th>Elegirnos</th>
+        <th>Contacto</th>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @text_items.each do |text| %>
+          <tr>
+            <td><%= text.nosotros %></td>
+            <td><%= text.quehacemos %></td>
+            <td><%= text.quehacemos2 %></td>
+
+            <td><%= text.elegirnos %></td>
+            <td><%= text.contacto %></td>
+            <td><%= link_to 'Editar', edit_text_item_path(text) , class:"btn btn-primary" %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'New Text', new_text_item_path %>
+  </div>  <div class="col-xs-1"></div>
+</div>

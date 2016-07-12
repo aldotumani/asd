@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :text_items
   devise_for :users
   resources :news_items
   resources :videos

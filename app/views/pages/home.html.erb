@@ -31,8 +31,8 @@
     <div class="titulo-azul" style="color:#166565">Nosotros</div>
     <br>
     <div class="texto">
-      Ante el inminente auge de las nuevas fuentes de energía, somos el agente que desarrolla soluciones a las distintas necesidades del mercado. Entregamos servicios y productos integrales, apuntando a objetivos como optimización de la eficiencia energética y económica; desarrollo, administración y auditoría de proyectos de ingeniería;  además  de la realización de asesorías técnicas, legales, financieras y comerciales en ERNC.
-    </div>
+      <%= TextItem.all.first.nosotros %>
+      </div>
 
   </div>
   <div class="col-xs-6" style="height: 100%">
@@ -144,9 +144,10 @@
 
   <div class="texto"  style="color:white">
 
-    Chile es uno de los países con índices de radiación solar más altos del mundo, es por eso que tenemos una inmejorable ventaja comparativa en la generación de electricidad a través de esta fuente.
-<br>
-    La energía solar es una forma limpia, predecible y segura de rentabilizar espacios no utilizados tales como techumbres o terrenos aledaños a la industria o comercio. Por tanto es responsabilidad nuestra ser capaces de aprovechar este beneficio en pos de lograr una independencia de la matriz energética común y una reducción en gastos operacionales, colaborando así con un desarrollo sustentable en el largo plazo.
+    <%= TextItem.all.first.quehacemos %>
+    <br>
+    <%= TextItem.all.first.quehacemos2 %>
+
   </div></div>
   <div class="col-xs-2"></div>
 
@@ -190,7 +191,7 @@
           <br>
           <div class="texto">
 
-            Somos una empresa que se desarrolla bajo altos estándares de confiabilidad, profesionalismo y rigurosidad, entregando productos y servicios de clase mundial. Buscamos estrechar la brecha existente entre las problemáticas y requerimientos energéticos de los clientes y las soluciones innovadoras, contribuyendo a la diversificación y refresco de las matrices energéticas de Chile y Latinoamérica.
+            <%= TextItem.all.first.elegirnos %>
           </div>
 
         </div>
@@ -272,7 +273,8 @@
         </div>
       <div class="texto" style="color:white">
 
-        Abantos Energy está atendida personalmente por sus dueños, lo cual se traduce en una rápida respuesta ante cualquier inquietud y a un alto grado de responsabilidad en las propuestas diseñadas para los clientes e inversionistas.
+        <%= TextItem.all.first.contacto %>
+
       </div>
     </div>
 
@@ -344,10 +346,15 @@
         El estudio se encarga de entregar indicadores pertinentes como VAN, Payback, Rentabilidad, Ahorro Mensual, entre otros, los cuales permiten contrastar el proyecto.
 
         <div class="row">
-        <div class="col-xs-4">
-          <div class="foto-y-fondo ">
-            <div class="fondo-verde" style=" width:50%; height: 76%;margin-top: 12%; opacity: 1"></div>
-            <img src="assets/plata.png" class="iconos-info" >
+          <div class="col-xs-4"></div>
+
+          <div class="col-xs-4">
+          <div class="foto-y-fondo " style="width: 80%;
+                  margin-left: 10%;
+                  margin-bottom: 16px;
+                  margin-top: 22px;" >
+            <div class="fondo-verde" style=" width:36%; height: 76%;margin-top: 12%; opacity: 1"></div>
+            <img src="assets/plata.png" class="iconos-info borde-icono" >
           </div>
           <div class="texto-iconos texto-popup">DISMINUCIÓN DE COSTOS</div>
 
@@ -374,22 +381,26 @@
         <br>
 
         <div class="row">
+
           <div class="col-xs-4">
             <div class="foto-y-fondo" style="width: 80%;
                     margin-left: 10%;
                     margin-bottom: 16px;
                     margin-top: 22px;" >
               <div class="fondo-verde" style=" width:50%; height: 76%;margin-top: 12%;opacity: 1"></div>
-              <img src="assets/enchufe.png" style="width:100%;" class="iconos-info">
+              <img src="assets/enchufe.png" style="width:100%;" class="iconos-info borde-icono">
             </div>
             <div class="texto-iconos texto-popup">CONEXÍON RED ELECTRICA</div>
           </div>
 
 
           <div class="col-xs-4">
-            <div class="foto-y-fondo"  >
-              <div class="fondo-verde red-fondo" style=" width:71%; height: 54%;margin-top: 25%;opacity: 1"></div>
-              <img src="assets/equipo.PNG" style="width:100%;" class="iconos-info">
+            <div class="foto-y-fondo" style="width: 80%;
+                    margin-left: 10%;
+                    margin-bottom: 16px;
+                    margin-top: 22px;" >
+              <div class="fondo-verde red-fondo" style=" width:66%; height: 54%;margin-top: 25%;opacity: 1"></div>
+              <img src="assets/equipo.PNG" style="width:100%;" class="iconos-info borde-icono">
             </div>
             <div class="texto-iconos texto-popup">equipo</div>
           </div>
@@ -401,8 +412,8 @@
                   margin-left: 10%;
                   margin-bottom: 16px;
                   margin-top: 22px;" >
-            <div class="fondo-verde red-fondo" style=" width:50%; height: 76%;margin-top: 12%; opacity: 1;"></div>
-            <img src="assets/huellasi.png" style="width:100%;" class="iconos-info">
+            <div class="fondo-verde red-fondo" style=" width:42%; height: 76%;margin-top: 12%; opacity: 1;"></div>
+            <img src="assets/huellasi.png" style="width:100%;" class="iconos-info borde-icono">
           </div>
           <div class="texto-iconos texto-popup">REDUCCIÓN HUELLA DE CARBONO</div>
         </div>
@@ -428,19 +439,27 @@
         - Viabilidad de la conexión entre la planta y la red eléctrica.
 
 <div class="row">
-        <div class="col-xs-4">
-          <div class="foto-y-fondo" >
+  <div class="col-xs-2"></div>
+
+  <div class="col-xs-4">
+          <div class="foto-y-fondo" style="width: 80%;
+                  margin-left: 10%;
+                  margin-bottom: 16px;
+                  margin-top: 22px;" >
             <div class="fondo-verde paneles-fondo" style=" width:69%; height: 60%; margin-top: 23%; opacity: 1" ></div>
-            <img src="assets/panel.png" style="width:100%;" class="iconos-info">
+            <img src="assets/panel.png" style="width:100%;" class="iconos-info borde-icono">
           </div>
           <div class="texto-iconos texto-popup">paneles/recepción de energía</div>
         </div>
 
 
   <div class="col-xs-4">
-    <div class="foto-y-fondo" >
+    <div class="foto-y-fondo"style="width: 80%;
+            margin-left: 10%;
+            margin-bottom: 16px;
+            margin-top: 22px;"  >
       <div class="fondo-verde" style=" width:37%; height: 72%;margin-top: 14%; opacity: 1"></div>
-      <img src="assets/energia.png" style="width:100%;" class="iconos-info">
+      <img src="assets/energia.png" style="width:100%;" class="iconos-info borde-icono">
     </div>
     <div class="texto-iconos texto-popup">potencia eléctrica</div>
   </div>
