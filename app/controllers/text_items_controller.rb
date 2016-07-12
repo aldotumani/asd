@@ -1,5 +1,6 @@
 class TextItemsController < ApplicationController
   before_action :set_text_item, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /text_items
   # GET /text_items.json
