@@ -113,7 +113,19 @@ a {
 
 
 .cambiar-opacidad{
-opacity: 1;
+//opacity: 1;
+  background: $barra2;
+  border-radius: 50%;
+  border: 4px solid $barra2;
+  border-radius: 50%
+}
+
+.iconos-verde
+{
+  background: $barra2;
+  border-radius: 50%;
+  border: 4px solid $barra2;
+  border-radius: 50%
 }
 
 
