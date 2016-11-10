@@ -94,6 +94,20 @@
 
 }
 
+.btn-primary:active
+{
+  background: $barra1;
+  border-color: $barra1;
+
+}
+.btn-primary:focus
+{
+  background: $barra1;
+  border-color: $barra1;
+
+}
+
+
 .links_claros:hover{
 
   opacity: 0.7;
