@@ -195,7 +195,9 @@
           <% if @project != nil %>
               <%= link_to @project do %>
               <%= image_tag @project.image.url(:medium_1x), style:"width: 100%; height: 230px;"%>
-                  <% end %>
+                  <div class="titulo-youtube"><%=@project.nombre %></div>
+
+        <% end %>
 
         <% end %>
         </div>
