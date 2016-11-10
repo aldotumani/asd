@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :fotos
+  resources :projects
   resources :text_items
   devise_for :users
   resources :news_items

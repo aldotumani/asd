@@ -1,0 +1,33 @@
+<div class="col-xs-1"></div>
+<div class="col-xs-10">
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre, class:"form-control"  %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image, class:"form-control"  %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_area :descripcion, class:"form-control", style:"height:300px"  %>
+  </div>
+  <div class="actions">
+    <%= f.submit  class:"btn btn-primary" %>
+  </div>
+<% end %>
+</div>
+<div class="col-xs-1"></div>

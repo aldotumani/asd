@@ -1,0 +1,74 @@
+<a href="<%= root_path %>" xmlns="http://www.w3.org/1999/html">
+  <img src="/assets/portada2.png" style="width:100%;">
+</a>
+
+<div class="titulo-azul text-center" style="font-size:50px;margin-top: 40px;"><%= @project.nombre %></div>
+
+<div class="barra" style="margin-top: 25px; margin-bottom:40px;">
+  <div class="barra1"></div>
+  <div class="barra2"></div>
+  <div class="barra3"></div>
+</div>
+
+
+<div class="row">
+
+  <div class="col-xs-1"></div>
+
+  <div class="col-xs-3">
+    <%=  @project.descripcion.html_safe %>
+
+
+  </div>
+    <div class="col-xs-7" style="margin-bottom: 50px">
+      <%= render_gallery_for @project.fotos %>
+      <%= link_to 'Atrás', projects_path, class:"btn btn-primary", style:"position: absolute;right: 0px; bottom: -10px;" %>
+
+    </div>
+
+  <div class="col-xs-1">
+
+  </div>
+
+</div>
+<% if user_signed_in? %>
+
+<row>
+
+
+  <div class="col-xs-1"></div>
+  <div class="col-xs-10">
+
+
+    <br><br>    <br><br>
+    <br><br>
+    <br><br>
+
+    <% @project.fotos.each do |foto| %>
+        <%= image_tag foto.image.url(:medium_1x), style:"width:100px;" %>
+
+        <%= link_to 'Eliminar', foto, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
+        <br>
+    <% end %>
+
+    <% @foto=Foto.new %>
+
+    <%= form_for(@foto) do |f| %>
+
+        <div class="field">
+          <%= f.label :image %><br>
+          <%= f.file_field :image %>
+        </div>
+        <%= f.hidden_field :project_id, :value => @project.id %>
+
+        <div class="actions">
+          <%= f.submit%>
+
+        </div>
+    <% end %>
+
+
+</div>
+  <div class="col-xs-1"></div>
+</row>
+<% end %>

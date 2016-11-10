@@ -25,7 +25,7 @@
 
     <div class="margenes-superiores2">
 
-  <div class="col-xs-6">
+  <div class="col-xs-6" style="padding:0 25px">
 
     <div class="titulo-blanco" >Quienes Somos</div>
     <div class="titulo-azul" style="color:#166565">Nosotros</div>
@@ -35,9 +35,19 @@
       </div>
 
   </div>
-  <div class="col-xs-6" style="height: 100%">
-    <img src="assets/pajaro_solido.PNG" style="display: block;margin: 0 auto;height: 350px;">
-  </div>
+
+      <div class="col-xs-6" style="padding:0 25px">
+
+        <div class="titulo-blanco">por qué</div>
+        <div class="titulo-azul">elegirnos</div>
+        <br>
+        <div class="texto">
+
+          <%= TextItem.all.first.elegirnos %>
+        </div>
+
+      </div>
+
   </div>
   </div>
   <div class="col-xs-1">
@@ -161,7 +171,7 @@
     <div class="margenes-superiores" style="margin-top: 0">
 
       <div class="col-xs-12">
-        <div class="col-xs-5">
+        <div class="col-xs-6" style="padding-right:60px">
 
         <div class="titulo-blanco">videos</div>
         <div class="titulo-azul">proyectos</div>
@@ -174,20 +184,20 @@
                   frameborder="0" allowFullScreen></iframe>
           <div class="titulo-youtube"><%=@video.titulo %></div>
               <% end %>
-        </div>
-        <div class="col-xs-1">
-        </div>
+ </div>
+        <div class="col-xs-6" style="padding-left:60px">
 
-        <div class="col-xs-6">
-
-          <div class="titulo-blanco">por qué</div>
-          <div class="titulo-azul">elegirnos</div>
+          <div class="titulo-blanco">descripción</div>
+          <div class="titulo-azul">proyectos</div>
           <br>
-          <div class="texto">
+          <div class="ver-mas"><%= link_to "ver más proyectos", projects_url %></div>
+          <% @project = Project.all.order(updated_at: :desc).first %>
+          <% if @project != nil %>
+              <%= link_to @project do %>
+              <%= image_tag @project.image.url(:medium_1x), style:"width:80%"%>
+                  <% end %>
 
-            <%= TextItem.all.first.elegirnos %>
-          </div>
-
+        <% end %>
         </div>
 
 

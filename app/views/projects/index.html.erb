@@ -1,0 +1,77 @@
+<a href="<%= root_path %>">
+  <img src="assets/portada2.png" style="width:100%;">
+</a>
+
+<div class="titulo-azul text-center" style="font-size:50px;margin-top: 40px;">Projectos</div>
+
+<div class="barra" style="margin-top: 25px; margin-bottom:40px;">
+  <div class="barra1"></div>
+  <div class="barra2"></div>
+  <div class="barra3"></div>
+</div>
+
+
+<div class="row">
+
+  <div class="col-xs-1"></div>
+  <div class="col-xs-10">
+
+
+
+  <% if @projects!= nil %>
+
+      <% @projects.order(updated_at: :desc).each do |project| %>
+          <div class="col-xs-4 videos-index">
+            <%= link_to project do %>
+            <td><%= image_tag project.image.url(:medium_1x), style:"width:80%; margin: 0 10%;" %></td>
+
+
+            <div class="titulo-youtube"><%=project.nombre %></div>
+
+                <% end %>
+
+            <% if user_signed_in? %>
+
+
+                <%= link_to 'Editar', edit_project_path(project), class:"btn btn-warning", style:"color:white;"  %>
+                <%= link_to 'Eliminar', project, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger", style:"color:white;" %>
+            <% end %>
+          </div>
+
+      <% end %>
+
+  <% end %>
+
+
+<br>
+
+
+    <br>
+  </div>  <div class="col-xs-1"></div>
+</div>
+
+
+<% if user_signed_in? %>
+
+
+    <div class="col-xs-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-1"></div>
+      <div class="col-xs-10">
+        <br>
+        <br>
+        <%= link_to 'Nuevo Proyecto', new_project_path, class:"btn btn-primary" %>
+      <%= link_to'Logout', destroy_user_session_path, :method => :delete, class:"btn btn-primary" %>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div>
+
+    <div class="col-xs-1"></div>
+    </div>
+<% end %>
